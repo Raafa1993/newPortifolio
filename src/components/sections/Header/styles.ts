@@ -8,18 +8,16 @@ export const Container = styled.header`
   margin-top: 120px;
   padding: 32px;
   background: var(--content);
-  /* opacity: 0.4; */
   box-shadow: 0px 5px 40px -1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(40px);
-
   border-radius: 14px;
-
 `;
 
 export const Contents = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 3rem;
 
   width: 100%;
   height: 100%;
@@ -75,8 +73,110 @@ export const ContentRight = styled.div`
 
   width: 100%;
   height: 100%;
+`;
 
-  background: lightsalmon;
+export const SectionImage = styled.div`
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+`;
+
+export const SectionWidgeBottom = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-170%, 180%);
+
+  transition: all 0.35s;
+
+  .widgetOne {
+    display: grid;
+    place-items: center;
+    width: 158px;
+    height: 90px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 5px 40px -1px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  }
+  
+  @media (max-width: 1080px) {
+    transform: translate(-140%,140%);
+  }
+
+  @media (max-width: 880px) {
+    /* transform: translate(-140%,120%); */
+
+    .widgetOne {
+      width: 132px;
+      height: 80px;
+    }
+  }
+`;
+
+export const SectionWidgeLeft = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-260%, -190%);
+  
+  transition: all 0.35s;
+
+  .widgetTwo {
+    display: grid;
+    place-items: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 5px 40px -1px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  }
+  
+  @media (max-width: 1080px) {
+    transform: translate(-210%, -190%);
+  }
+
+  @media (max-width: 880px) {
+    transform: translate(-230%, -190%);
+    .widgetTwo {
+      width: 75px;
+      height: 75px;
+    }
+  }
+`;
+
+export const SectionWidgeRight = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(80%, 120%);
+
+  transition: all 0.35s;
+
+  .widgetThere {
+    display: grid;
+    place-items: center;
+    width: 140px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 5px 40px -1px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  @media (max-width: 1080px) {
+    transform: translate(40%, 0%);
+  }
+
+  @media (max-width: 880px) {
+    transform: translate(20%, 0%);
+    
+  }
 `;
 
 export const FieldGroup = styled.div`
@@ -85,5 +185,4 @@ export const FieldGroup = styled.div`
   justify-content: center;
   gap: 20px;
   margin-top: 40px;
-
 `;
