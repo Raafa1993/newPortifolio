@@ -1,9 +1,19 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 interface PropsButton {
   isLoading?: boolean;
   typeButton: string;
 }
+
+const moveGradient = keyframes`
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 100%;
+  }
+`
 
 export const Container = styled.button<PropsButton>`
   display: flex;
@@ -41,6 +51,20 @@ export const Container = styled.button<PropsButton>`
       transform: scale(1.05);
     }
   `}
+
+${props => props.typeButton === 'linearEffect' && css`
+  background: #5d2fdf repeating-linear-gradient(#4affde 0%, #5b9dff 40%, #d06bff 60%, #ff34d2 100%
+  );
+  background-size: 200% 200%;
+  animation: ${moveGradient} 5s linear infinite alternate;
+  /* background-position: 90% 0;
+  color: var(--text); */
+
+  &:hover {
+    background-position: 185% 50%;
+    transform: scale(1.05);
+  }
+`}
 
   ${props => props.typeButton === 'linear' && css`
     background: transparent;

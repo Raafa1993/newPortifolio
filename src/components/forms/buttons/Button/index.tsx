@@ -5,7 +5,7 @@ import { Container } from './styles';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   isLoading?: boolean;
-  typeButton: "linear" | "default" | "degrade";
+  typeButton: "linear" | "default" | "degrade" | 'linearEffect';
 }
 
 export default function Buton({

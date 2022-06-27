@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     --white: #FFF;
     --text: #EFF5F5;
     --subTitle: #9599A7;
+    --subTitleLight: #BDBBBF;
 
     --textButton: #2F2C53;
 

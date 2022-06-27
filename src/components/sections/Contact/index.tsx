@@ -4,6 +4,6 @@ import { Container } from './styles';
 
 export default function Contact() {
   return (
-    <Container>Contact</Container>
+    <Container id='Contact'>Contact</Container>
   )
 }

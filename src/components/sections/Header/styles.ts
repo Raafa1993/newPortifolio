@@ -1,23 +1,33 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const moveWheel = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+`
 
 export const Container = styled.header`
   display: grid;
   place-items: center;
-
-  height: 680px;
   margin-top: 120px;
-  padding: 32px;
   background: var(--content);
   box-shadow: 0px 5px 40px -1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(40px);
   border-radius: 14px;
+  padding: 2rem 0.75rem;
 `;
 
 export const Contents = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2rem;
 
   width: 100%;
   height: 100%;
@@ -186,3 +196,44 @@ export const FieldGroup = styled.div`
   gap: 20px;
   margin-top: 40px;
 `;
+
+export const ContentSubLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 100%;
+  margin-top: 340px;
+
+
+`;
+
+export const ContentSubRight = styled.div`
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 6rem;
+`;
+
+export const Mouse = styled.span`
+  width: 25px;
+  height: 50px;
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  display: flex;
+`;
+
+export const MouseWheel = styled.span`
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: auto;
+  animation: ${moveWheel} 1s linear infinite;
+`;
+
+
